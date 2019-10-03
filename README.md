@@ -11,3 +11,5 @@
 3.2. Shared: conteúdo que você compartilha entre seus domínios. Serviria inclusive para múltiplos domínios;
 
 3.3. Infrastrutura: Implementação do repository pattern, o repository ficou independente da persitência que você vai usar, podendo ser banco sql , orm, nosql… Usei orm entity in memory, já que era para teste. Usei code first;
+
+4 - TDD método: Red: fazer falhar, Green: fazer passar, Refactor: refatorar o código. Para criar os testes eu tive que criar um gerador de ordem de pagamento.
