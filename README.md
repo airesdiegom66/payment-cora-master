@@ -2,7 +2,7 @@
 
 1 – Rodar a solução: ler o document Pré-requisitos.docx;
 
-2 – Baixar a collection do postman e importar. Já possui uns exemplos para ajudar.
+2 – Baixar a collection do postman e depois importa. Já possui uns exemplos para ajudar.
 
 3 – Solução: DDD, TDD, CQRS, Solid, Clean Code, Api Rest (BFF), Code First (o código cria o banco)
 
