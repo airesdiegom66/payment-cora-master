@@ -2,7 +2,7 @@
 
 1 – Rodar a solução: ler o document Pré-requisitos.docx;
 
-1.2. Para testar: ver as evidências em no doc PostmanEvidências.docx e importar a coleção do postman BancoCoraPaymentCollection.postman_collection. Basicamente é gerar um ordem de pagamento do tipo boleto ou cartão, e esta ordem de pagamento poderá ser paga após isso.
+1.2. Para testar: ver as evidências no doc PostmanEvidências.docx e importar a coleção do postman BancoCoraPaymentCollection.postman_collection. Basicamente é gerar um ordem de pagamento do tipo boleto ou cartão, e esta ordem de pagamento poderá ser paga após isso.
 
 2 – Baixar a collection do postman e depois importar. Já possui os exemplos para ajudar. Tem um documento com as evidências: PostmanEvidências.docx. Coleção postman: BancoCoraPaymentCollection.postman_collection
 
