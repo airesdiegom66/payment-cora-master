@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "19e15a8c-c7ae-4cc0-9087-924471461ae0",
+		"name": "BancoCoraPaymentCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1 - Gerar Ordem de Pagamento com Boleto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:62382/api/v1/order/boleto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62382",
+					"path": [
+						"api",
+						"v1",
+						"order",
+						"boleto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.2 - Boleto - Pagamento Boleto com sucesso",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"João\",\r\n  \"lastName\": \"Silva\",\r\n  \"document\": \"345.639.400-46\",\r\n  \"email\": \"joao.silva@email.com\",\r\n  \r\n  \"barCode\": \"222358\",\r\n  \"totalPaid\": 7800\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:62382/api/v1/payment/boleto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62382",
+					"path": [
+						"api",
+						"v1",
+						"payment",
+						"boleto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.3. Boleto - Erro dados pessoais",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"João\",\r\n  \"lastName\": \"Silva\",\r\n  \"document\": \"345.639\",\r\n  \"email\": \"joao.silvemail.com\",\r\n  \r\n  \"barCode\": \"222358\",\r\n  \"totalPaid\": 4825\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:62382/api/v1/payment/boleto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62382",
+					"path": [
+						"api",
+						"v1",
+						"payment",
+						"boleto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.4. Boleto - Valor menor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"João\",\r\n  \"lastName\": \"Silva\",\r\n  \"document\": \"345.639.400-46\",\r\n  \"email\": \"joao.silva@email.com\",\r\n  \r\n  \"barCode\": \"222358\",\r\n  \"totalPaid\": 4825\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:62382/api/v1/payment/boleto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62382",
+					"path": [
+						"api",
+						"v1",
+						"payment",
+						"boleto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2 - Gerar Ordem de Pagto Cartão de Crédito",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:62382/api/v1/order/creditcard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62382",
+					"path": [
+						"api",
+						"v1",
+						"order",
+						"creditcard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.1 - Crédito - Pagamento com sucesso",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"paymentNumber\": \"97\",\r\n  \"firstName\": \"Maria\",\r\n  \"lastName\": \"Silva\",\r\n  \"document\": \"777.307.510-70\",\r\n  \"email\": \"maria.silva@email.com\",\r\n  \r\n  \"cardHolderName\": \"Maria Silva\",\r\n  \"cardNumber\": \"5117.5484.0010.9227\",\r\n  \"cardExpirationDate\": \"2020-10-03\",\r\n  \"cvv\": 259,\r\n  \r\n  \"totalPaid\": 100\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:62382/api/v1/payment/creditcard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62382",
+					"path": [
+						"api",
+						"v1",
+						"payment",
+						"creditcard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.2. Crédito - Erro Dados pessoais",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"paymentNumber\": \"97\",\r\n  \"firstName\": \"Maria\",\r\n  \"lastName\": \"Silva\",\r\n  \"document\": \"777510-70\",\r\n  \"email\": \"maria.siemail.com\",\r\n  \r\n  \"cardHolderName\": \"Maria Silva\",\r\n  \"cardNumber\": \"5117.5484.0010.9227\",\r\n  \"cardExpirationDate\": \"2020-10-03\",\r\n  \"cvv\": 259,\r\n  \r\n  \"totalPaid\": 100\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:62382/api/v1/payment/creditcard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62382",
+					"path": [
+						"api",
+						"v1",
+						"payment",
+						"creditcard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.3. Crédito - Cartão inválido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"paymentNumber\": \"97\",\r\n  \"firstName\": \"Maria\",\r\n  \"lastName\": \"Silva\",\r\n  \"document\": \"777.307.510-70\",\r\n  \"email\": \"maria.silva@email.com\",\r\n  \r\n  \"cardHolderName\": \"Maria Silva\",\r\n  \"cardNumber\": \"5117.10.9227\",\r\n  \"cardExpirationDate\": \"2010-10-03\",\r\n  \"cvv\": 259,\r\n  \r\n  \"totalPaid\": 100\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:62382/api/v1/payment/creditcard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62382",
+					"path": [
+						"api",
+						"v1",
+						"payment",
+						"creditcard"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
